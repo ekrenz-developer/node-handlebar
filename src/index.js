@@ -15,8 +15,9 @@ const startServer = () => {
   // se configura handlebars
   server.engine(".hbs", expHbs({
     extname: ".hbs",
-    defaultLayout: "main",
-    layoutsDir: path.join(__dirname, "views/layouts")
+    defaultLayout: "default",
+    layoutsDir: path.join(__dirname, "views/layouts"),
+    partialsDir: path.join(__dirname, "views/partials")
   }));
   
   server.set("view engine", ".hbs");
